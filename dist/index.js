@@ -9,6 +9,8 @@ function init() {
   const container = document.querySelector(".container");
   const list = document.querySelector("ul.list-group");
   let tasks = [];
+
+  //render ul
   function render(tasks) {
     let innerHtml = "";
     if (tasks.length > 0) {
@@ -27,6 +29,8 @@ function init() {
     list.innerHTML = innerHtml;
   }
   render(tasks);
+
+  //warning modal function
   function warning(container) {
     let div = document.createElement("div");
     div.setAttribute("class", "alert alert-dismissible alert-warning");
@@ -39,6 +43,8 @@ function init() {
       container.removeChild(div);
     }, 3000);
   }
+
+  //listeners
   add.addEventListener("click", () => {
     tasks = [...tasks, { task: "Task number", id: tasks.length + 1 }];
     render(tasks);
