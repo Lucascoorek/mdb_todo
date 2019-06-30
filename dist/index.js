@@ -41,7 +41,7 @@ function init() {
     container.appendChild(div);
     setTimeout(() => {
       container.removeChild(div);
-    }, 3000);
+    }, 2000);
   }
 
   //listeners
